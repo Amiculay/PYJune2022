@@ -10,12 +10,13 @@ class User:
         self.balance -= amount
     
     def display_user_balance(self):
-        print("{}'s balance: ${}\n" .format(self.name, self.balance))
+        print("{}'s balance: ${}" .format(self.name, self.balance))
 
     def make_transfer(self, amount, user):
         self.balance -= amount
         user.balance += amount
-        print("{}'s balance: ${}\n{}'s Balance: ${}" .format(self.name, self.balance, user.name, user.balance))
+        self.display_user_balance()
+        user.display_user_balance()
 
 
 aaron = User("Aaron Nguyen")
