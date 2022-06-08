@@ -12,4 +12,3 @@ class Pirate:
     def attack ( self , ninja ):
         ninja.health -= self.strength
         return self
-
