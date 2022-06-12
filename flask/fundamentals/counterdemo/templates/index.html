@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" text="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Counter Site</title>
+</head>
+<body>
+    <h1>Ready to count</h1>
+
+    <div class="counter">
+        <h2>Counter 1</h2>
+        <h3>Clicked {{session['counter_1']}} times</h3>
+        <a href="/counter/1">count!</a>
+    </div>
+    <div class="counter">
+        <h2>Counter 2</h2>
+        <h3>Clicked {{session['counter_2']}} times</h3>
+        <a href="/counter/2">count!</a>
+    </div>
+    <div class="counter">
+        <h2>Counter 3</h2>
+        <h3>Clicked {{session['counter_3']}} times</h3>
+        <a href="/counter/3">count!</a>
+    </div>
+    <div class="counter">
+        <h2>Counter 4</h2>
+        <h3>Clicked {{session['counter_4']}} times</h3>
+        <a href="/counter/4">count!</a>
+    </div>
+    <div class="counter">
+        <h2>Counter 5</h2>
+        <h3>Clicked {{session['counter_5']}} times</h3>
+        <a href="/counter/5">count!</a>
+    </div>
+    <a href="/reset">Reset the world</a>
+</body>
+</html>
