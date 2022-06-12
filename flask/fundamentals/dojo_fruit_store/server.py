@@ -22,15 +22,15 @@ def checkout():
     print(f"Charging {full_name} for {count} fruits")
     # Return data for post
     return render_template("checkout.html",
-    strawberries = strawberries,
-    blackberries = blackberries,
-    raspberries = raspberries,
-    apples = apples,
-    count = count,
-    first_name = first_name,
-    last_name = last_name,
-    student_id = student_id,
-    time = time
+        strawberries = strawberries,
+        blackberries = blackberries,
+        raspberries = raspberries,
+        apples = apples,
+        count = count,
+        first_name = first_name,
+        last_name = last_name,
+        student_id = student_id,
+        time = time
     )
 
 @app.route('/fruits')         
