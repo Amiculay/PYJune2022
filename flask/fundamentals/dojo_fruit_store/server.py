@@ -15,7 +15,7 @@ def checkout():
     count = strawberries + blackberries + raspberries + apples
     first_name = request.form['first_name']
     last_name = request.form['last_name']
-    full_name = first_name + " " +last_name
+    full_name = first_name + " " + last_name
     student_id = request.form['student_id']
     time_func = datetime.datetime.now()
     time = time_func.strftime("%B %d %Y %I:%M:%S %p")
