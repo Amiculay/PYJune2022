@@ -15,10 +15,11 @@ def checkout():
     count = strawberries + blackberries + raspberries + apples
     first_name = request.form['first_name']
     last_name = request.form['last_name']
+    full_name = first_name + " " +last_name
     student_id = request.form['student_id']
     time_func = datetime.datetime.now()
     time = time_func.strftime("%B %d %Y %I:%M:%S %p")
-    print(request.form)
+    print(f"Charging {full_name} for {count} fruits")
     # Return data for post
     return render_template("checkout.html",
     strawberries = strawberries,
