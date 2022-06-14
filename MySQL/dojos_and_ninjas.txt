@@ -1,0 +1,49 @@
+3	119	14:42:58	INSERT INTO dojo (name)
+ VALUES("Seattle")	1 row(s) affected	0.000 sec
+3	120	14:42:58	SELECT * FROM dojo
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+0	121	14:43:18	INSERT INTO dojo (name)
+ VALUE("Burbank", "San Jose")	Error Code: 1136. Column count doesn't match value count at row 1	0.000 sec
+3	122	14:43:23	INSERT INTO dojo (name)
+ VALUE("Burbank")	1 row(s) affected	0.015 sec
+3	123	14:43:23	SELECT * FROM dojo
+ LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
+3	124	14:43:31	INSERT INTO dojo (name)
+ VALUE("San Jose")	1 row(s) affected	0.016 sec
+3	125	14:43:31	SELECT * FROM dojo
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+14:49:48	DELETE FROM users where id < 4	0 row(s) affected	0.000 sec
+3	148	14:55:46	INSERT INTO dojo (name)
+ VALUES ('Los Angeles'), ('Cupertino'), ('Dallas')	3 row(s) affected
+ Records: 3  Duplicates: 0  Warnings: 0	0.000 sec
+3	149	14:55:46	SELECT * FROM dojo
+ LIMIT 0, 1000	3 row(s) returned	0.015 sec / 0.000 sec
+3	150	14:58:43	INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+ VALUES ("Aaron", "Nguyen", 20, 11)	1 row(s) affected	0.000 sec
+3	151	14:58:43	SELECT * FROM dojo
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+3	152	14:59:05	INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+ VALUES ("Evan", "Hyett", 25, 11)	1 row(s) affected	0.016 sec
+3	153	14:59:05	SELECT * FROM ninjas
+ LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
+3	154	14:59:48	INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+ VALUES ("Benjamin", "Smith", 30, 11)	1 row(s) affected	0.000 sec
+3	155	14:59:48	SELECT * FROM ninjas
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+3	156	15:00:49	INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+ VALUES ("Benjamin", "Smith", 30, 12), ("Clay", "Park", 22, 12), ("Peter", "Liu", 21, 12)	3 row(s) affected
+ Records: 3  Duplicates: 0  Warnings: 0	0.000 sec
+3	157	15:00:49	SELECT * FROM ninjas
+ LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
+3	158	15:01:52	INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+ VALUES ("Adam", "Jacobs", 23, 13), ("Jonathan", "Ung", 19, 13), ("Tu", "Nguyen", 25, 13)	3 row(s) affected
+ Records: 3  Duplicates: 0  Warnings: 0	0.000 sec
+3	159	15:01:52	SELECT * FROM ninjas
+ LIMIT 0, 1000	9 row(s) returned	0.000 sec / 0.000 sec
+3	170	15:03:55	SELECT * FROM ninjas
+ WHERE dojo_id = 11
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+3	171	15:04:11	SELECT * FROM ninjas
+ WHERE dojo_id = 13
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+3	172	15:05:01	SELECT * FROM ninjas ORDER BY id DESC LIMIT 1	1 row(s) returned	0.000 sec / 0.000 sec
