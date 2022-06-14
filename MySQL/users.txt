@@ -1,0 +1,11 @@
+03:28:39	INSERT INTO users (first_name, last_name, email) VALUES('Aaron', 'Nguyen', 'aaronnguyen1123@gmail.com')	1 row(s) affected	0.000 sec
+03:29:45	INSERT INTO users (first_name, last_name, email) VALUES('Ryan', 'Magley', 'ryansemail@codingdojo.com')	1 row(s) affected	0.000 sec
+03:30:13	INSERT INTO users (first_name, last_name, email) VALUES('Noah', 'Neglia', 'noahs@codingdojo.com')	1 row(s) affected	0.000 sec
+03:31:09	SELECT * FROM users LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+03:34:25	SELECT * FROM users WHERE email = 'aaronnguyen1123@gmail.com' LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+03:38:09	SELECT * FROM users ORDER BY id DESC LIMIT 1	1 row(s) returned	0.000 sec / 0.000 sec
+03:41:23	UPDATE users SET last_name = 'Pancakes' WHERE id = 3	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.015 sec
+03:42:46	DELETE FROM users where id = 2	1 row(s) affected	0.000 sec
+03:44:24	SELECT * FROM users ORDER BY first_name DESC LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
+
+
