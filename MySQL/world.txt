@@ -1,0 +1,48 @@
+3	58	15:22:11	SELECT countries.name, languages.language, languages.percentage
+ FROM countries
+ JOIN languages ON countries.code = languages.country_code
+ WHERE language = 'Slovene'
+ LIMIT 0, 1000	4 row(s) returned	0.000 sec / 0.000 sec
+
+3	63	15:38:46	SELECT countries.name AS country, COUNT(cities.id) AS number_cities
+ FROM countries
+ JOIN cities ON countries.code = cities.country_code
+ GROUP BY countries.code
+ ORDER BY COUNT(cities.id) desc
+ LIMIT 0, 1000	232 row(s) returned	0.000 sec / 0.000 sec
+
+3	71	15:42:40	SELECT cities.name, cities.population
+ FROM cities
+ JOIN countries ON cities.country_id = countries.id
+ WHERE countries.name = 'Mexico' and cities.population > 500000
+ ORDER BY cities.population desc
+ LIMIT 0, 1000	27 row(s) returned	0.000 sec / 0.000 sec
+
+3	72	15:44:16	SELECT countries.name, languages.percentage
+ FROM countries
+ JOIN languages ON countries.code = languages.country_code
+ WHERE languages.percentage > 89
+ ORDER BY languages.percentage DESC
+ LIMIT 0, 1000	81 row(s) returned	0.000 sec / 0.000 sec
+
+3	73	15:45:30	SELECT name, surface_area, population
+ FROM countries
+ WHERE surface_area < 501 AND population > 100000
+ LIMIT 0, 1000	7 row(s) returned	0.000 sec / 0.000 sec
+
+3	76	15:46:55	SELECT name, government_form, capital, life_expectancy
+ FROM countries
+ WHERE government_form = "Constitutional Monarchy" AND capital > 200 AND life_expectancy > 75
+ LIMIT 0, 1000	12 row(s) returned	0.016 sec / 0.000 sec
+
+3	1	15:54:09	SELECT countries.name AS country_name, cities.name AS city_name, cities.district, cities.population
+ FROM cities
+ JOIN countries ON cities.country_id = countries.id
+ WHERE countries.name = 'Argentina' AND cities.district = 'Buenos Aires' AND cities.population > 500000
+ LIMIT 0, 1000	6 row(s) returned	0.000 sec / 0.000 sec
+
+3	2	15:54:48	SELECT region, COUNT(id) AS number_countrties
+ FROM countries
+ GROUP BY region
+ ORDER BY COUNT(id) desc
+ LIMIT 0, 1000	25 row(s) returned	0.000 sec / 0.000 sec
