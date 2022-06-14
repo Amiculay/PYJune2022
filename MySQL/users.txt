@@ -7,5 +7,3 @@
 03:41:23	UPDATE users SET last_name = 'Pancakes' WHERE id = 3	1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.015 sec
 03:42:46	DELETE FROM users where id = 2	1 row(s) affected	0.000 sec
 03:44:24	SELECT * FROM users ORDER BY first_name DESC LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
-
-
