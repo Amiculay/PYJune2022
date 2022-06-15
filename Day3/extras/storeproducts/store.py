@@ -8,7 +8,6 @@ class Store:
         return self
     
     def sell_product(self, id):
-        self.products[id].print_info()
         del self.products[id]
         return self
 
