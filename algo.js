@@ -68,3 +68,25 @@ function removeFront(arr) {
     arr.length--;
     console.log(arr);
 }
+
+
+
+function isRotation(s1, s2) {
+    if (s1.length != s2.length) {
+      return false;
+    }
+    var double = s1 + s1;
+    for (let i = 0; i < double.length; i++) {
+        if (double[i] === s2[0]) {
+            for (let j = 1; j < s2.length; j++) {
+                if (s2[j] == double[i + j]) {
+                    continue;
+                } else {
+            return false;
+            }
+        }
+        return true;
+        }
+    }
+    return false;
+}
