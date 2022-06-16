@@ -15,6 +15,7 @@
                 <th>Full Name</th>
                 <th>Email</th>
                 <th>Created At</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -24,10 +25,17 @@
                     <td>{{user.full_name}}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.created_at}}</td>
+                    <td>
+                        <a href="/users/{{user.id}}">Show</a>
+                        <span> | </span>
+                        <a href="/users/{{user.id}}/edit">Edit</a>
+                        <span> | </span>
+                        <a href="/users/{{user.id}}/delete">Delete</a>
+                    </td>
                 </tr>
             {%endfor%}
         </tbody>
     </table>
-    <a href="/">Add a New User</a>
+    <a href="/users/new">Add a New User</a>
 </body>
 </html>
