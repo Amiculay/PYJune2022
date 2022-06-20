@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is where I want the dojos to display</h1>
+    <form action="/dojo_form/submit" method="post">
+        <label for="name">Dojo name:</label>
+        <input type="name" name="name" id="name">
+        <input type="submit">
+    </form>
+
+    <h1>All Dojos</h1>
+    {%for dojo in all_dojos%}
+        <h3><a href="/show_ninjas/dojo/{{dojo.id}}">{{dojo.name}}</a></h3>
+    {%endfor%}
+    <a href="/create/new_ninja">New Ninja</a>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All of my Minions</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <th>ID (Don't read!)</th>
+            <th>Monster Name</th>
+            <th>Monster Habitat</th>
+            <th>Monster AGE</th>
+            <th>Actions</th>
+        </tr>
+        
+        {%for monster in all_monsters%}
+            <tr>
+                <td>{{monster.id}}</td>
+                <td>{{monster.monster_name}}</td>
+                <td>{{monster.monster_habitat}}</td>
+                <td>{{monster.monster_age}}</td>
+                <td><a href="/monster/{{monster.id}}">Show |</a></td>
+                <td><a href="/monster/edit_form/{{monster.id}}">Edit |</a></td>
+                <td><a href="/monster/delete/{{monster.id}}">Delete</a></td>
+            </tr>
+        {%endfor%} 
+    </table>
+
+    <a href="/monster_form">Add New Monster!</a>
+
+</body>
+</html>

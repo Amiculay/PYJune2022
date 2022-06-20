@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit one of my Minions</title>
+</head>
+
+<body>
+
+    <form action="/monster/edit_one_monster/{{monster.id}}" method="POST">
+        <label for="monster_name">Monster Name:</label>
+        <input type="text" name="monster_name" id="monster_name" value="{{monster.monster_name}}" placeholder="{{monster.monster_name}}">
+        
+        <label for="monster_habitat">Monster habitat:</label>
+        <input type="text" name="monster_habitat" id="monster_habitat" value="{{monster.monster_habitat}}" placeholder="{{monster.monster_name}}">
+        
+        <label for="monster_age">Monster age:</label>
+        <input type="text" name="monster_age" id="monster_age" value="{{monster.monster_age}}" placeholder="{{monster.monster_name}}">
+        <input type="submit">
+    </form>
+
+    <a href="/monster/{{monster.id}}">Show this monster</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/monster_form/submit" method="POST">
+        <label for="monster_name">Monster Name:</label>
+        <input type="text" name="monster_name" id="monster_name">
+        
+        <label for="monster_habitat">Monster habitat:</label>
+        <input type="text" name="monster_habitat" id="monster_habitat">
+        
+        <label for="monster_age">Monster age:</label>
+        <input type="text" name="monster_age" id="monster_age">
+        <input type="submit">
+    </form>
+    
+    
+    <h1>What is in request.form dictionary?</h1>
+    <h3> request.form = {'monster_name': inputval, </h3>
+    <h3> 'monster_habitat': inputval, </h3>
+    <h3> 'monster_age': inputval} </h3>
+    <a href="/all_monsters">See the monsters</a>
+
+</body>
+</html>

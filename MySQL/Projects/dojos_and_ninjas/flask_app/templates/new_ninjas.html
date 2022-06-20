@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is where we look the one Ninja</h1>
+    <h2><a href="/read_dojos">Home</a></h2>
+
+    <form action="/ninja_form/submit" method="post">
+        <label for="first_name">Ninja's First Name:</label>
+        <input type="text" name="first_name" id="first_name"><br>
+        <label for="last_name">Ninja Last Name:</label>
+        <input type="text" name="last_name" id="last_name"><br>
+        <label for="age">Ninja age:</label>
+        <input type="number" name="age" id="age"><br>
+        <label for="dojo">Dojo:</label>
+        <select name="dojo_id" id="dojo_id">
+            {%for dojo in all_dojos%}
+            <option value="{{dojo.id}}">{{dojo.name}}</option>
+            {%endfor%}
+        </select><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
