@@ -7,7 +7,7 @@ import re
 bcrypt = Bcrypt(app)
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-NAME_REGEX = re.compile(r"^[a-zA-z,'-. ]+$")
+NAME_REGEX = re.compile(r"^[a-zA-z,'-. ]{2,50}$")
 PASSWORD_REGEX = re.compile(r"")
 
 class User:

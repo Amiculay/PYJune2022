@@ -10,11 +10,10 @@ def index():
 
 @app.route('/register', methods=['POST'])
 def register_user():
-    if not request.form['password']: # Checks if password field is blank
-        pw_hash = "" # Sets a password that triggers flash
-    else: # If it isn't blank, we can hash the password and still trigger flash if needed
-        pw_hash = bcrypt.generate_password_hash(request.form['password'])
 
+    if not User.validate_user(request.form):
+        return redirect('/')
+    pw_hash = bcrypt.generate_password_hash(request.form['password'])
     data = {
         'first_name': request.form['first_name'],
         'last_name': request.form['last_name'],
@@ -22,15 +21,11 @@ def register_user():
         'password': pw_hash
     }
 
-    if not User.validate_user(request.form):
-        return redirect('/')
     user_id = User.create_user(data)
-    user = User.get_email(data)
     session['user_id'] = user_id
     session['email'] = data['email']
     session['first_name'] = data['first_name']
     session['last_name'] = data['last_name']
-    session['full_name'] = data['full_name']
     return redirect('/dashboard')
 
 @app.route('/login', methods=['POST'])
