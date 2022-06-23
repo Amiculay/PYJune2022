@@ -48,7 +48,6 @@ def login():
     session['email'] = user.email
     session['first_name'] = user.first_name
     session['last_name'] = user.last_name
-    session['full_name'] = user.full_name
     return redirect('/dashboard')
 
 @app.route('/dashboard')
