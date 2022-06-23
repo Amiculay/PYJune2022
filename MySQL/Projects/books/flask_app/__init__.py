@@ -2,4 +2,4 @@ from flask import Flask
 app = Flask(__name__)
 app.secret_key = "custom_key"
 
-DATABASE = 'your_database_here'
+DATABASE = 'books'
